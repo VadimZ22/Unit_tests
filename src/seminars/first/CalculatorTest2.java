@@ -1,3 +1,4 @@
+package seminars.first;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -12,7 +13,7 @@ import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class CalculatorTest {
+public class CalculatorTest2 {
 
 //    public static void main(String[] args) {
 //        // Проверка базового функционала с целыми числами:

@@ -6,6 +6,10 @@ import java.util.List;
 import java.util.Objects;
 
 public class Cart {
+    public List<Product> getCartItems() {
+        return cartItems;
+    }
+
     public List<Product> cartItems = new ArrayList<>(); // Корзина с продуктами
 
     // При создании корзины нужно передать магазин

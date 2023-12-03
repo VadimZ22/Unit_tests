@@ -60,3 +60,4 @@ public class Calculator {
         double sumResult = purchaseAmount - (purchaseAmount * discountAmount) / 100;
         return sumResult;
     }
+}
