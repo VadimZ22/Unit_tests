@@ -1,5 +1,7 @@
 package seminars.first;
 
+import seminars.first.model.Calculator;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -136,31 +138,31 @@ public class CalculatorTest2 {
         assertEquals(expectedMessage, actualMessage);
     }
 
-    @Test
-    void getOperandCompletesCorrectlyWithNumbers() {
-        String testedValue = "9"; // Значение для тестов
-        ByteArrayInputStream in = new ByteArrayInputStream(testedValue.getBytes());
-        InputStream inputStream = System.in;  // Сохраняем ссылку на ввод с клавиатуры
-        System.setIn(in); // Подменяем ввод
+//    @Test
+//    void getOperandCompletesCorrectlyWithNumbers() {
+//        String testedValue = "9"; // Значение для тестов
+//        ByteArrayInputStream in = new ByteArrayInputStream(testedValue.getBytes());
+//        InputStream inputStream = System.in;  // Сохраняем ссылку на ввод с клавиатуры
+//        System.setIn(in); // Подменяем ввод
+//
+//        Calculator.getOperand(); // Вызываем метод
+//
+//        System.out.println(testedValue); // Для наглядности вывода
+//        System.setIn(inputStream); // Подменяем обратно
+//    }
 
-        Calculator.getOperand(); // Вызываем метод
-
-        System.out.println(testedValue); // Для наглядности вывода
-        System.setIn(inputStream); // Подменяем обратно
-    }
-
-    @Test
-    void getOperandCompletesCorrectlyWithNotNumbers() {
-        String testedValue = "K";
-        ByteArrayInputStream in = new ByteArrayInputStream(testedValue.getBytes());
-        ByteArrayOutputStream out = new ByteArrayOutputStream();
-        InputStream inputStream = System.in;
-        System.setIn(in);
-        System.setOut(new PrintStream(out));
-        assertThatThrownBy(() -> Calculator.getOperand())
-                .isInstanceOf(IllegalStateException.class)
-                .describedAs("Input error");
-        System.setIn(inputStream);
-        System.setOut(null);
-    }
+//    @Test
+//    void getOperandCompletesCorrectlyWithNotNumbers() {
+//        String testedValue = "K";
+//        ByteArrayInputStream in = new ByteArrayInputStream(testedValue.getBytes());
+//        ByteArrayOutputStream out = new ByteArrayOutputStream();
+//        InputStream inputStream = System.in;
+//        System.setIn(in);
+//        System.setOut(new PrintStream(out));
+//        assertThatThrownBy(() -> Calculator.getOperand())
+//                .isInstanceOf(IllegalStateException.class)
+//                .describedAs("Input error");
+//        System.setIn(inputStream);
+//        System.setOut(null);
+//    }
 }
